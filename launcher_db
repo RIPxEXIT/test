@@ -1,0 +1,11 @@
+CREATE DATABASE launcher_db;
+
+USE launcher_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL, -- Store hashed passwords
+    hwid VARCHAR(255) DEFAULT NULL, -- Store HWID
+    uid VARCHAR(50) DEFAULT NULL -- Unique identifier for the user
+);
